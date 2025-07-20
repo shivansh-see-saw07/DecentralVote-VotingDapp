@@ -31,14 +31,14 @@ export default function ElectionDetails() {
     const params = useParams()
     const electionId = params.id as string
     const navigate = useNavigate()
-    const { address, isConnected } = useAccount()
+    const { isConnected } = useAccount()
     const { writeContract } = useWriteContract()
     const { toast } = useToast()
     const publicClient = usePublicClient()
 
     const [candidateName, setCandidateName] = useState("")
     const [isRegistering, setIsRegistering] = useState(false)
-    const [hasVoted, setHasVoted] = useState(false) // This should come from contract
+    const [hasVoted] = useState(false) // This should come from contract
     const [isDialogOpen, setIsDialogOpen] = useState(false)
     const [candidates, setCandidates] = useState<{ address: string; name: string }[]>([])
     const [totalVotes, setTotalVotes] = useState<number>(0)
