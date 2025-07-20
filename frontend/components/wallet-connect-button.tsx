@@ -1,5 +1,4 @@
 "use client"
-import * as React from "react"
 import { Button } from "../src/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../src/components/ui/dropdown-menu"
 import { useAccount, useConnect, useDisconnect } from "wagmi"

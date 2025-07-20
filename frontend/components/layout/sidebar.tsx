@@ -1,7 +1,6 @@
 "use client"
-import * as React from "react"
 import { cn } from "../../src/lib/utils"
-import { Vote, Plus, Users, BarChart3, Settings, Home } from "lucide-react"
+import { Vote, Plus, Settings, Home } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 
