@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+
 import { Vote } from "lucide-react"
 import { Link } from "react-router-dom"
 import { WalletConnectButton } from "../wallet-connect-button"
