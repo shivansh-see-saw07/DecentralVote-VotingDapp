@@ -42,14 +42,17 @@ export default function Elections() {
             }
             const results = await Promise.all(promises)
             console.log('Fetched elections:', results)
-            const mapped = results.map((e, i) => ({
-                name: e[0],
-                admin: e[1],
-                isActive: e[2],
-                isResultDeclared: e[3],
-                winnerCandidateId: e[4],
-                id: i,
-            }))
+            const mapped = results.map((e, i) => {
+                const arr = e as any[];
+                return {
+                    name: arr[0],
+                    admin: arr[1],
+                    isActive: arr[2],
+                    isResultDeclared: arr[3],
+                    winnerCandidateId: arr[4],
+                    id: i,
+                };
+            });
             setElections(mapped)
         }
         fetchElections()

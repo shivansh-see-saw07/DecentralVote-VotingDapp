@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom"
-import { AnimatedBackground } from "./components/animated-background"
 import { InteractiveCursor } from "./components/interactive-cursor"
 import { Toaster } from "./components/ui/toaster"
 import Dashboard from "./pages/dashboard"

@@ -2,9 +2,6 @@
 import { Header } from "../../components/layout/header"
 import { Sidebar } from "../../components/layout/sidebar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import { Badge } from "../components/ui/badge"
-import { Progress } from "../components/ui/progress"
-import { Trophy, BarChart3 } from "lucide-react"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { publicClient } from "../lib/wagmi"
@@ -76,14 +73,12 @@ export default function Results() {
                             {loading ? (
                                 <Card className="animate-in fade-in-50 slide-in-from-bottom-4 duration-500 backdrop-blur-sm bg-background/80 border-border/50">
                                     <CardContent className="flex flex-col items-center justify-center py-12">
-                                        <BarChart3 className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                                         <h3 className="text-lg font-semibold mb-2">Loading results...</h3>
                                     </CardContent>
                                 </Card>
                             ) : error ? (
                                 <Card className="animate-in fade-in-50 slide-in-from-bottom-4 duration-500 backdrop-blur-sm bg-background/80 border-border/50">
                                     <CardContent className="flex flex-col items-center justify-center py-12">
-                                        <BarChart3 className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                                         <h3 className="text-lg font-semibold mb-2">{error}</h3>
                                     </CardContent>
                                 </Card>
